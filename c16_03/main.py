@@ -24,7 +24,14 @@ print(moyenne_mathseleve1)
 
 
 def moyenne_tuples(notes, eleve, matiere):
-  
+  res = [item for item in notes if item[0]==eleve]
+  res1 = [item for item in notes if item[1]==matiere]
+  return sum([x[2] for x in res])/len(res)
+
+print("La moyenne de l'élève 1 en math est : ", moyenne_tuples(notes, 'eleve1', 'math'))
+print("La moyenne de l'élève 1 en physique est : ",moyenne_tuples(notes, 'eleve1', 'physique'))
+print("La moyenne de l'élève 1 en économie est : ", moyenne_tuples(notes, 'eleve1', 'eco'))
+print("La moyenne de l'élève 2 en math est : ", moyenne_tuples(notes, 'eleve2', 'math'))
 
 
 class Note:
@@ -49,6 +56,8 @@ print(onote.eleve)
 print(onote.matiere)
 print(onote.valeur)
 Note.afficher(onote)
+
+
 
 
 
