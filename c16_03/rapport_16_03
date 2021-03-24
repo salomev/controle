@@ -83,7 +83,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 main.py:62: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = [<c16_03.main.Note object at 0x7fd33e2d01f0>, <c16_03.main.Note object at 0x7fd33e2d0070>, <c16_03.main.Note object at...ject at 0x7fd33e2d00a0>, <c16_03.main.Note object at 0x7fd33e2d0190>, <c16_03.main.Note object at 0x7fd33e2d06d0>, ...]
+self = [<c16_03.main.Note object at 0x7f9e29e350d0>, <c16_03.main.Note object at 0x7f9e29e35070>, <c16_03.main.Note object at...ject at 0x7f9e29e35640>, <c16_03.main.Note object at 0x7f9e29e356a0>, <c16_03.main.Note object at 0x7f9e29e35700>, ...]
 
     def afficher(self):
 >     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
@@ -144,7 +144,7 @@ main.py:62: in <module>
     Note.afficher(onotes)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = [<c16_03.main.Note object at 0x7fd33e372a00>, <c16_03.main.Note object at 0x7fd33e3729a0>, <c16_03.main.Note object at...ject at 0x7fd33e3724f0>, <c16_03.main.Note object at 0x7fd33e372550>, <c16_03.main.Note object at 0x7fd33e372a30>, ...]
+self = [<c16_03.main.Note object at 0x7f9e29ed7940>, <c16_03.main.Note object at 0x7f9e29ed7910>, <c16_03.main.Note object at...ject at 0x7f9e29ed7460>, <c16_03.main.Note object at 0x7f9e29ed74c0>, <c16_03.main.Note object at 0x7f9e29ed7520>, ...]
 
     def afficher(self):
 >     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
@@ -241,7 +241,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 main.py:62: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = [<c16_03.main.Note object at 0x7fd33e35faf0>, <c16_03.main.Note object at 0x7fd33e35f9d0>, <c16_03.main.Note object at...ject at 0x7fd33e35f8b0>, <c16_03.main.Note object at 0x7fd33e35f880>, <c16_03.main.Note object at 0x7fd33e35f9a0>, ...]
+self = [<c16_03.main.Note object at 0x7f9e29ebeb20>, <c16_03.main.Note object at 0x7f9e29ebeaf0>, <c16_03.main.Note object at...ject at 0x7f9e29ebe8b0>, <c16_03.main.Note object at 0x7f9e29ebe940>, <c16_03.main.Note object at 0x7f9e29ebe970>, ...]
 
     def afficher(self):
 >     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
@@ -287,7 +287,7 @@ main.py:62: in <module>
     Note.afficher(onotes)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = [<c16_03.main.Note object at 0x7fd33e2d0d30>, <c16_03.main.Note object at 0x7fd33e2d0d60>, <c16_03.main.Note object at...ject at 0x7fd33e2d0dc0>, <c16_03.main.Note object at 0x7fd33e2d0e80>, <c16_03.main.Note object at 0x7fd33e2d0a90>, ...]
+self = [<c16_03.main.Note object at 0x7f9e29ebbfd0>, <c16_03.main.Note object at 0x7f9e29ebb460>, <c16_03.main.Note object at...ject at 0x7f9e29ebb550>, <c16_03.main.Note object at 0x7f9e29ebb700>, <c16_03.main.Note object at 0x7f9e29ebb820>, ...]
 
     def afficher(self):
 >     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
@@ -321,7 +321,7 @@ main.py:62: in <module>
     Note.afficher(onotes)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = [<c16_03.main.Note object at 0x7fd33e3533d0>, <c16_03.main.Note object at 0x7fd33e353250>, <c16_03.main.Note object at...ject at 0x7fd33e3728e0>, <c16_03.main.Note object at 0x7fd33e3723a0>, <c16_03.main.Note object at 0x7fd33e2ce280>, ...]
+self = [<c16_03.main.Note object at 0x7f9e29ebe250>, <c16_03.main.Note object at 0x7f9e29ebe490>, <c16_03.main.Note object at...ject at 0x7f9e29ebe340>, <c16_03.main.Note object at 0x7f9e29ed77c0>, <c16_03.main.Note object at 0x7f9e29ed77f0>, ...]
 
     def afficher(self):
 >     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
@@ -418,7 +418,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 main.py:62: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = [<c16_03.main.Note object at 0x7fd33e371dc0>, <c16_03.main.Note object at 0x7fd33e371670>, <c16_03.main.Note object at...ject at 0x7fd33e371eb0>, <c16_03.main.Note object at 0x7fd33e371850>, <c16_03.main.Note object at 0x7fd33e371070>, ...]
+self = [<c16_03.main.Note object at 0x7f9e29d867f0>, <c16_03.main.Note object at 0x7f9e29d86730>, <c16_03.main.Note object at...ject at 0x7f9e29d86580>, <c16_03.main.Note object at 0x7f9e29d86430>, <c16_03.main.Note object at 0x7f9e29d863d0>, ...]
 
     def afficher(self):
 >     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
@@ -458,4 +458,4 @@ FAILED test_16_03.py::Test1603sute::test_5 - AssertionError: assert False
 FAILED test_16_03.py::Test1603sute::test_6 - AttributeError: 'list' object ha...
 FAILED test_16_03.py::Test1603sute::test_8 - AttributeError: 'list' object ha...
 FAILED test_16_03.py::Test1603sute::test_9 - AssertionError: assert False
-========================= 6 failed, 1 passed in 0.13s ==========================
+========================= 6 failed, 1 passed in 0.12s ==========================
