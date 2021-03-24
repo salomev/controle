@@ -38,17 +38,14 @@ class Note:
   def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
     self.eleve = eleve
     self.matiere = matiere
-    self.valeur = valeur
-
+    self.valeur = valeur  
 
   def afficher(self):
     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
 
+  # Question 6
   def __str__(self):
     return print(Note)
-
-  def moyenne_Notes(Note):
-    return sum(Note)/len(Note)
 
 
 onote = Note('eleve1', 'maths', 13)
@@ -56,6 +53,43 @@ print(onote.eleve)
 print(onote.matiere)
 print(onote.valeur)
 Note.afficher(onote)
+
+# Question 5
+onotes = []
+for i in notes:
+  onotes.append(Note(i[0], i[1], i[2]))
+Note.afficher(onotes)
+
+
+# Question 6
+for x in range(len(onotes)):
+  print(onotes[x])
+
+# Question 7
+notes_enregistrées = []
+for k in range(len(notes_enregistrées)):
+  print(notes_enregistrées[k])
+
+# Question 8
+def moyenne_Notes(nom_eleve = None, matiere = None):
+  liste = notes_enregistrées
+  res = []
+  liste_eleves = []
+  for x in liste :
+    liste_eleves = [i for i in liste if i.eleve == nom_eleve or nom_eleve == None]
+    liste_matieres = [i for i in liste_eleves if i.matiere == matiere or matiere == None]
+    res = [i.valeur for i in liste_matieres]
+    moyenne = sum(res)/len(res)
+    return moyenne
+print(moyenne_Notes())
+  
+
+
+
+
+
+
+
 
 
 
