@@ -15,14 +15,15 @@ print(note1)
 
 
 
-
+# Question 4 a
 moyenne_eleve1 = (note1[2]+note2[2]+note3[2]+note4[2]+note5[2]+note6[2])/6
 print(moyenne_eleve1)
 
+# Question 4 b
 moyenne_mathseleve1 = (note1[2]+note3[2]+note6[2])/3
 print(moyenne_mathseleve1)
 
-
+# Question 4 c
 def moyenne_tuples(notes, eleve, matiere):
   res = [item for item in notes if item[0]==eleve]
   res1 = [item for item in notes if item[1]==matiere]
