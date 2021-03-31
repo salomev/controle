@@ -12,14 +12,84 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
 
     def test_10(self):
         try:
-            from .main  import Note
-        except:
-           assert False
-        try:
->           Note.vider()
-E           AttributeError: type object 'Note' has no attribute 'vider'
+>           from .main  import Note
 
-test_16_03.py:98: AttributeError
+test_16_03.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    print(notes)
+    print(note1)
+    
+    
+    
+    
+    # Question 4 a
+    moyenne_eleve1 = (note1[2]+note2[2]+note3[2]+note4[2]+note5[2]+note6[2])/6
+    print(moyenne_eleve1)
+    
+    # Question 4 b
+    moyenne_mathseleve1 = (note1[2]+note3[2]+note6[2])/3
+    print(moyenne_mathseleve1)
+    
+    # Question 4 c
+    def moyenne_tuples(notes, eleve, matiere):
+      res = [item for item in notes if item[0]==eleve]
+      res1 = [item for item in notes if item[1]==matiere]
+      return sum([x[2] for x in res])/len(res)
+    
+    print("La moyenne de l'élève 1 en math est : ", moyenne_tuples(notes, 'eleve1', 'math'))
+    print("La moyenne de l'élève 1 en physique est : ",moyenne_tuples(notes, 'eleve1', 'physique'))
+    print("La moyenne de l'élève 1 en économie est : ", moyenne_tuples(notes, 'eleve1', 'eco'))
+    print("La moyenne de l'élève 2 en math est : ", moyenne_tuples(notes, 'eleve2', 'math'))
+    
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+      # Question 6
+      def __str__(self):
+        return print(Note)
+    
+    
+    onote = Note('eleve1', 'maths', 13)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    # Question 5
+    onotes = []
+    for i in notes:
+      onotes.append(Note(i[0], i[1], i[2]))
+>   Note.afficher(onotes)
+
+main.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = [<c16_03.main.Note object at 0x7f27130d80d0>, <c16_03.main.Note object at 0x7f27130d8070>, <c16_03.main.Note object at...ject at 0x7f27130d8640>, <c16_03.main.Note object at 0x7f27130d86a0>, <c16_03.main.Note object at 0x7f27130d8700>, ...]
+
+    def afficher(self):
+>     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+E     AttributeError: 'list' object has no attribute 'eleve'
+
+main.py:45: AttributeError
 
 During handling of the above exception, another exception occurred:
 
@@ -29,14 +99,10 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
         try:
             from .main  import Note
         except:
-           assert False
-        try:
-            Note.vider()
-        except:
->           assert False
-E           AssertionError: assert False
+>          assert False
+E          AssertionError: assert False
 
-test_16_03.py:100: AssertionError
+test_16_03.py:96: AssertionError
 ----------------------------- Captured stdout call -----------------------------
 [('eleve1', 'math', 13), ('eleve1', 'physique', 15), ('eleve1', 'math', 13), ('eleve1', 'eco', 12), ('eleve1', 'eco', 13), ('eleve1', 'math', 12), ('eleve2', 'math', 13), ('eleve2', 'math', 14)]
 ('eleve1', 'math', 13)
@@ -71,26 +137,33 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_4>
         except ImportError:
             try:
 >               from .main import moyenne_tuple as moyenne_tuples
-E               ImportError: cannot import name 'moyenne_tuple' from 'c16_03.main' (/home/stidsem4/iut/2021/controle/salome.viennet/c16_03/main.py)
 
-test_16_03.py:19: ImportError
+test_16_03.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+main.py:62: in <module>
+    Note.afficher(onotes)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-During handling of the above exception, another exception occurred:
+self = [<c16_03.main.Note object at 0x7f271317a940>, <c16_03.main.Note object at 0x7f271317a910>, <c16_03.main.Note object at...ject at 0x7f271317a460>, <c16_03.main.Note object at 0x7f271317a4c0>, <c16_03.main.Note object at 0x7f271317a520>, ...]
 
-self = <c16_03.test_16_03.Test1603sute testMethod=test_4>
+    def afficher(self):
+>     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+E     AttributeError: 'list' object has no attribute 'eleve'
 
-    def test_4(self):
-        try:
-            from main import moyenne_tuples
-        except ImportError:
-            try:
-                from .main import moyenne_tuple as moyenne_tuples
-            except ImportError:
->               assert False, "moyenne_tuples non définie"
-E               AssertionError: moyenne_tuples non définie
-E               assert False
-
-test_16_03.py:21: AssertionError
+main.py:45: AttributeError
+----------------------------- Captured stdout call -----------------------------
+[('eleve1', 'math', 13), ('eleve1', 'physique', 15), ('eleve1', 'math', 13), ('eleve1', 'eco', 12), ('eleve1', 'eco', 13), ('eleve1', 'math', 12), ('eleve2', 'math', 13), ('eleve2', 'math', 14)]
+('eleve1', 'math', 13)
+13.0
+12.666666666666666
+La moyenne de l'élève 1 en math est :  13.0
+La moyenne de l'élève 1 en physique est :  13.0
+La moyenne de l'élève 1 en économie est :  13.0
+La moyenne de l'élève 2 en math est :  13.5
+eleve1
+maths
+13
+eleve eleve1 matiere maths note 13
 _____________________________ Test1603sute.test_5 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
@@ -98,9 +171,83 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
     def test_5(self):
         try:
 >           from .main  import Note, onotes
-E           ImportError: cannot import name 'onotes' from 'c16_03.main' (/home/stidsem4/iut/2021/controle/salome.viennet/c16_03/main.py)
 
-test_16_03.py:33: ImportError
+test_16_03.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    print(notes)
+    print(note1)
+    
+    
+    
+    
+    # Question 4 a
+    moyenne_eleve1 = (note1[2]+note2[2]+note3[2]+note4[2]+note5[2]+note6[2])/6
+    print(moyenne_eleve1)
+    
+    # Question 4 b
+    moyenne_mathseleve1 = (note1[2]+note3[2]+note6[2])/3
+    print(moyenne_mathseleve1)
+    
+    # Question 4 c
+    def moyenne_tuples(notes, eleve, matiere):
+      res = [item for item in notes if item[0]==eleve]
+      res1 = [item for item in notes if item[1]==matiere]
+      return sum([x[2] for x in res])/len(res)
+    
+    print("La moyenne de l'élève 1 en math est : ", moyenne_tuples(notes, 'eleve1', 'math'))
+    print("La moyenne de l'élève 1 en physique est : ",moyenne_tuples(notes, 'eleve1', 'physique'))
+    print("La moyenne de l'élève 1 en économie est : ", moyenne_tuples(notes, 'eleve1', 'eco'))
+    print("La moyenne de l'élève 2 en math est : ", moyenne_tuples(notes, 'eleve2', 'math'))
+    
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+      # Question 6
+      def __str__(self):
+        return print(Note)
+    
+    
+    onote = Note('eleve1', 'maths', 13)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    # Question 5
+    onotes = []
+    for i in notes:
+      onotes.append(Note(i[0], i[1], i[2]))
+>   Note.afficher(onotes)
+
+main.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = [<c16_03.main.Note object at 0x7f2713165b20>, <c16_03.main.Note object at 0x7f2713165af0>, <c16_03.main.Note object at...ject at 0x7f27131658b0>, <c16_03.main.Note object at 0x7f2713165940>, <c16_03.main.Note object at 0x7f2713165970>, ...]
+
+    def afficher(self):
+>     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+E     AttributeError: 'list' object has no attribute 'eleve'
+
+main.py:45: AttributeError
 
 During handling of the above exception, another exception occurred:
 
@@ -114,69 +261,172 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
 E           AssertionError: assert False
 
 test_16_03.py:35: AssertionError
+----------------------------- Captured stdout call -----------------------------
+[('eleve1', 'math', 13), ('eleve1', 'physique', 15), ('eleve1', 'math', 13), ('eleve1', 'eco', 12), ('eleve1', 'eco', 13), ('eleve1', 'math', 12), ('eleve2', 'math', 13), ('eleve2', 'math', 14)]
+('eleve1', 'math', 13)
+13.0
+12.666666666666666
+La moyenne de l'élève 1 en math est :  13.0
+La moyenne de l'élève 1 en physique est :  13.0
+La moyenne de l'élève 1 en économie est :  13.0
+La moyenne de l'élève 2 en math est :  13.5
+eleve1
+maths
+13
+eleve eleve1 matiere maths note 13
 _____________________________ Test1603sute.test_6 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_6>
 
     def test_6(self):
 >       from .main import Note, onotes
-E       ImportError: cannot import name 'onotes' from 'c16_03.main' (/home/stidsem4/iut/2021/controle/salome.viennet/c16_03/main.py)
 
-test_16_03.py:41: ImportError
+test_16_03.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+main.py:62: in <module>
+    Note.afficher(onotes)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = [<c16_03.main.Note object at 0x7f271315ffd0>, <c16_03.main.Note object at 0x7f271315f460>, <c16_03.main.Note object at...ject at 0x7f271315f550>, <c16_03.main.Note object at 0x7f271315f700>, <c16_03.main.Note object at 0x7f271315f820>, ...]
+
+    def afficher(self):
+>     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+E     AttributeError: 'list' object has no attribute 'eleve'
+
+main.py:45: AttributeError
+----------------------------- Captured stdout call -----------------------------
+[('eleve1', 'math', 13), ('eleve1', 'physique', 15), ('eleve1', 'math', 13), ('eleve1', 'eco', 12), ('eleve1', 'eco', 13), ('eleve1', 'math', 12), ('eleve2', 'math', 13), ('eleve2', 'math', 14)]
+('eleve1', 'math', 13)
+13.0
+12.666666666666666
+La moyenne de l'élève 1 en math est :  13.0
+La moyenne de l'élève 1 en physique est :  13.0
+La moyenne de l'élève 1 en économie est :  13.0
+La moyenne de l'élève 2 en math est :  13.5
+eleve1
+maths
+13
+eleve eleve1 matiere maths note 13
 _____________________________ Test1603sute.test_8 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_8>
 
     def test_8(self):
         try:
-            from .main import Note
-        except ImportError:
-            assert False, "import de Note impossible"
-        try:
->           from .main  import moyenne_Notes as mnotes
-E           ImportError: cannot import name 'moyenne_Notes' from 'c16_03.main' (/home/stidsem4/iut/2021/controle/salome.viennet/c16_03/main.py)
+>           from .main import Note
 
-test_16_03.py:71: ImportError
+test_16_03.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+main.py:62: in <module>
+    Note.afficher(onotes)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-During handling of the above exception, another exception occurred:
+self = [<c16_03.main.Note object at 0x7f2713165250>, <c16_03.main.Note object at 0x7f2713165490>, <c16_03.main.Note object at...ject at 0x7f2713165340>, <c16_03.main.Note object at 0x7f271317a7c0>, <c16_03.main.Note object at 0x7f271317a7f0>, ...]
 
-self = <c16_03.test_16_03.Test1603sute testMethod=test_8>
+    def afficher(self):
+>     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+E     AttributeError: 'list' object has no attribute 'eleve'
 
-    def test_8(self):
-        try:
-            from .main import Note
-        except ImportError:
-            assert False, "import de Note impossible"
-        try:
-            from .main  import moyenne_Notes as mnotes
-        except ImportError:
-            try:
->               from .main  import moyenne_notes as mnotes
-E               ImportError: cannot import name 'moyenne_notes' from 'c16_03.main' (/home/stidsem4/iut/2021/controle/salome.viennet/c16_03/main.py)
-
-test_16_03.py:74: ImportError
-
-During handling of the above exception, another exception occurred:
-
-self = <c16_03.test_16_03.Test1603sute testMethod=test_8>
-
-    def test_8(self):
-        try:
-            from .main import Note
-        except ImportError:
-            assert False, "import de Note impossible"
-        try:
-            from .main  import moyenne_Notes as mnotes
-        except ImportError:
-            try:
-                from .main  import moyenne_notes as mnotes
-            except ImportError:
->               assert False, "La fonction moyenne_notes n'est pas définie"
-E               AssertionError: La fonction moyenne_notes n'est pas définie
-E               assert False
-
-test_16_03.py:76: AssertionError
+main.py:45: AttributeError
+----------------------------- Captured stdout call -----------------------------
+[('eleve1', 'math', 13), ('eleve1', 'physique', 15), ('eleve1', 'math', 13), ('eleve1', 'eco', 12), ('eleve1', 'eco', 13), ('eleve1', 'math', 12), ('eleve2', 'math', 13), ('eleve2', 'math', 14)]
+('eleve1', 'math', 13)
+13.0
+12.666666666666666
+La moyenne de l'élève 1 en math est :  13.0
+La moyenne de l'élève 1 en physique est :  13.0
+La moyenne de l'élève 1 en économie est :  13.0
+La moyenne de l'élève 2 en math est :  13.5
+eleve1
+maths
+13
+eleve eleve1 matiere maths note 13
 _____________________________ Test1603sute.test_9 ______________________________
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
+
+    def test_9(self):
+        try:
+>           from .main  import Note
+
+test_16_03.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    print(notes)
+    print(note1)
+    
+    
+    
+    
+    # Question 4 a
+    moyenne_eleve1 = (note1[2]+note2[2]+note3[2]+note4[2]+note5[2]+note6[2])/6
+    print(moyenne_eleve1)
+    
+    # Question 4 b
+    moyenne_mathseleve1 = (note1[2]+note3[2]+note6[2])/3
+    print(moyenne_mathseleve1)
+    
+    # Question 4 c
+    def moyenne_tuples(notes, eleve, matiere):
+      res = [item for item in notes if item[0]==eleve]
+      res1 = [item for item in notes if item[1]==matiere]
+      return sum([x[2] for x in res])/len(res)
+    
+    print("La moyenne de l'élève 1 en math est : ", moyenne_tuples(notes, 'eleve1', 'math'))
+    print("La moyenne de l'élève 1 en physique est : ",moyenne_tuples(notes, 'eleve1', 'physique'))
+    print("La moyenne de l'élève 1 en économie est : ", moyenne_tuples(notes, 'eleve1', 'eco'))
+    print("La moyenne de l'élève 2 en math est : ", moyenne_tuples(notes, 'eleve2', 'math'))
+    
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+      # Question 6
+      def __str__(self):
+        return print(Note)
+    
+    
+    onote = Note('eleve1', 'maths', 13)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    # Question 5
+    onotes = []
+    for i in notes:
+      onotes.append(Note(i[0], i[1], i[2]))
+>   Note.afficher(onotes)
+
+main.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = [<c16_03.main.Note object at 0x7f271302a7f0>, <c16_03.main.Note object at 0x7f271302a730>, <c16_03.main.Note object at...ject at 0x7f271302a580>, <c16_03.main.Note object at 0x7f271302a430>, <c16_03.main.Note object at 0x7f271302a3d0>, ...]
+
+    def afficher(self):
+>     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+E     AttributeError: 'list' object has no attribute 'eleve'
+
+main.py:45: AttributeError
+
+During handling of the above exception, another exception occurred:
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
 
@@ -184,17 +434,28 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
         try:
             from .main  import Note
         except:
-           assert False
->       assert hasattr(Note, 'instances')
-E       AssertionError: assert False
-E        +  where False = hasattr(<class 'c16_03.main.Note'>, 'instances')
+>          assert False
+E          AssertionError: assert False
 
-test_16_03.py:90: AssertionError
+test_16_03.py:89: AssertionError
+----------------------------- Captured stdout call -----------------------------
+[('eleve1', 'math', 13), ('eleve1', 'physique', 15), ('eleve1', 'math', 13), ('eleve1', 'eco', 12), ('eleve1', 'eco', 13), ('eleve1', 'math', 12), ('eleve2', 'math', 13), ('eleve2', 'math', 14)]
+('eleve1', 'math', 13)
+13.0
+12.666666666666666
+La moyenne de l'élève 1 en math est :  13.0
+La moyenne de l'élève 1 en physique est :  13.0
+La moyenne de l'élève 1 en économie est :  13.0
+La moyenne de l'élève 2 en math est :  13.5
+eleve1
+maths
+13
+eleve eleve1 matiere maths note 13
 =========================== short test summary info ============================
 FAILED test_16_03.py::Test1603sute::test_10 - AssertionError: assert False
-FAILED test_16_03.py::Test1603sute::test_4 - AssertionError: moyenne_tuples n...
+FAILED test_16_03.py::Test1603sute::test_4 - AttributeError: 'list' object ha...
 FAILED test_16_03.py::Test1603sute::test_5 - AssertionError: assert False
-FAILED test_16_03.py::Test1603sute::test_6 - ImportError: cannot import name ...
-FAILED test_16_03.py::Test1603sute::test_8 - AssertionError: La fonction moye...
+FAILED test_16_03.py::Test1603sute::test_6 - AttributeError: 'list' object ha...
+FAILED test_16_03.py::Test1603sute::test_8 - AttributeError: 'list' object ha...
 FAILED test_16_03.py::Test1603sute::test_9 - AssertionError: assert False
-========================= 6 failed, 1 passed in 0.08s ==========================
+========================= 6 failed, 1 passed in 0.09s ==========================
