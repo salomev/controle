@@ -34,20 +34,22 @@ print("La moyenne de l'élève 1 en physique est : ",moyenne_tuples(notes, 'elev
 print("La moyenne de l'élève 1 en économie est : ", moyenne_tuples(notes, 'eleve1', 'eco'))
 print("La moyenne de l'élève 2 en math est : ", moyenne_tuples(notes, 'eleve2', 'math'))
 
-
+n = []
 class Note:
   def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
     self.eleve = eleve
     self.matiere = matiere
     self.valeur = valeur  
+    self = n.append(self)
 
   def afficher(self):
-    print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    return print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+
+
 
   # Question 6
   def __str__(self):
-    return print(Note)
-
+    return f"(Élève : {self.eleve}, Matière : {self.matiere}, Note : {self.valeur})"
 
 onote = Note('eleve1', 'maths', 13)
 print(onote.eleve)
@@ -55,11 +57,12 @@ print(onote.matiere)
 print(onote.valeur)
 Note.afficher(onote)
 
+print(onote)
+
 # Question 5
 onotes = []
 for i in notes:
   onotes.append(Note(i[0], i[1], i[2]))
-Note.afficher(onotes)
 
 
 # Question 6
@@ -85,8 +88,38 @@ def moyenne_Notes(nom_eleve = None, matiere = None):
 print(moyenne_Notes())
   
 
+instances = []
+class Demo:
+  classattr = 'defaut'
+  def __init__(self, a):
+    self.a = a
+    self = instances.append(self)
 
 
+demo1 = Demo(1)
+demo2 = Demo(2)
+
+print(demo1.a)
+print(demo2.a)
+print(Demo.classattr)
+print(demo1.classattr)
+print(demo2.classattr)
+
+Demo.classattr = 23
+
+print(demo1.classattr)
+print(demo2.classattr)
+
+demo1.classattr = -1
+
+print(Demo.classattr)
+print(demo1.classattr)
+print(demo2.classattr)
+
+Demo.classattr = 14
+
+
+# Question 9
 
 
 
